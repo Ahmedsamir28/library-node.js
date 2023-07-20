@@ -7,7 +7,7 @@ const routeMybooks=require('./routers/mybooks.route')
 const routeContact=require('./routers/contact.route')
 const routeAbout=require('./routers/about.route')
 const session=require('express-session')
-const MongoDbStore=require('connect-mongodb-session')(session)
+const MongoDbtore=require('connect-mongodb-session')(session)
 const flash=require('connect-flash')
 
 const app=express()
@@ -25,7 +25,7 @@ var Store=new MongoDbStore({
 app.use(flash())
 
 app.use(session({
-    secret:'this is my secret key dfjkbnjdfnbhjshdvbshdvsd',
+    secret:'this is my secret key ...............',
     store:Store,
     resave: true,
     saveUninitialized: true
